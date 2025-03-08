@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button onclick="toggleBackground()">Toggle Background</button>
+    
+    <h2>Adjust Text Size</h2>
+    <input type="range" id="textSlider" min="10" max="50" value="16" oninput="adjustTextSize()">
+    <p id="text">This text changes size dynamically.</p>
+
+    <button onclick="showModal()">Open Modal</button>
+    <div id="modal" class="modal">
+        <p>Modal Content</p>
+        <button onclick="hideModal()">Close</button>
+    </div>
+    
+    <h2>Form Validation</h2>
+    <form id="userForm" onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Name">
+        <span class="error" id="nameError"></span><br>
+        <input type="email" id="email" placeholder="Email">
+        <span class="error" id="emailError"></span><br>
+        <input type="password" id="password" placeholder="Password">
+        <span class="error" id="passwordError"></span><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <h2>Dropdown Interaction</h2>
+    <select id="dropdown" onchange="showMessage()">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+    </select>
+    <p id="dropdownMessage"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
